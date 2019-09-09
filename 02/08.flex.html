@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	<style type="text/css">
+		.div1{
+			/* 970px
+			 左右15px
+			 */
+			width: 970px;
+			background-color: gray;
+			position: relative;
+			margin: 0px auto;
+			display: flex;
+			/* 让这个盒子(元素)  变成一个弹性盒子*/
+			/* flex-flow: column; */
+			justify-content: space-around;
+			/*
+			   space-around元素的排列方式,均匀分布  向左向右分布等等 
+			  */
+		}
+		.div2{
+			background-color: brown;
+			height: 80px;
+			/* width: 200px; */
+			flex-grow: 2;
+			/* 
+			7个元素中的宽度占比:
+			占得比例/总比例==> 2/(6*2+3)
+			 */
+		}
+		#div2{
+			flex-grow: 3;
+			background-color: #0000CC;
+		}
+	</style>
+	<div class="div1">
+		<div class="div2" id="div2">xx</div>
+		<div class="div2">xx</div>
+		<div class="div2">xx</div>
+		<div class="div2">xx</div>
+		<div class="div2">xx</div>
+		<div class="div2">xx</div>
+		<div class="div2">xx</div>
+		<div class="div2">xx</div>
+	</div>	
+		
+	</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+	<style type="text/css">
+		.div1{
+			opacity: 1;
+			/* 内容和自己都透明 */
+			width: 200px;
+			height: 200px;
+			background-color: brown;
+			/* overflow-y: scroll; */
+			/* overflow: auto; */
+			overflow: hidden;
+			/*
+			 内容超出了自己的区域:
+			hidden 就隐藏
+			scroll: 不管超出否都有滚动条
+			auto:超出就出现滚动条,不超出就不出现
+			visible就看的见
+			 */
+			background-image: url(img/25.jpg);
+			background-size: 200px 200px;
+		  position: relative;
+		}
+		.div1:hover .div2{
+			top: 150px;
+			transition: .3s;
+			/* 过度的世间:由一种样式变化到这个样式所用的世间 */
+		}
+		.div2{
+			width: 200px;
+			height: 50px;
+			background-color: rgba(250,100,40,0.3);/*a:背景颜色透明,元素的内容不会透明*/
+			
+			position: absolute;
+			left: 0px;
+			top: 200px;
+			transition: .3s;
+		}
+	</style>
+		
+	<div class="div1">
+	<div class="div2">xxx</div>	
+	</div>	
+		
+	</body>
+</html>

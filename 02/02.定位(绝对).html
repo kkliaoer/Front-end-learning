@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<style type="text/css">
+			body{
+				margin: 0px;
+				padding: 0px;
+			}
+			.div1 {
+				width: 200px;
+				height: 200px;
+				margin: 0px;
+				background-color: brown;
+				/* position: absolute; */
+				/* 绝对定位
+				
+				 原点:距离它最近的父级元素(设置过定位)
+				 body是最后一层
+				 */
+				/* 
+				没设置过定位只设置xy不会起作用 
+				 */
+				left: 100px;
+				top: 100px;
+				/* right: 100px; */
+			}
+
+			.div2 {
+				width: 50px;
+				height: 50px;
+				background-color: red;
+				position: absolute;
+				left: 100px;
+				top: 300px;
+
+			}
+		</style>
+		<p>xxxxxxxxxxxxxxxxxxxxxxxxxxxx1</p>
+		<div class="div1">
+
+			<div class="div2">xx</div>
+
+		</div>
+
+	</body>
+</html>
