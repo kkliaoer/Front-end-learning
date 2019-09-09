@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<style type="text/css">
+			.div1 {
+				width: 200px;
+				height: 200px;
+				background-color: brown;
+				cursor: pointer;
+				position: absolute;
+				left: 100px;
+				top: 100px;
+			}
+		</style>
+		<div class="div1"></div>
+		<script type="text/javascript">
+			// var div1=document.querySelector(".div1")
+			// div1.onclick=function() {
+			// 	console.log(window.getComputedStyle(div1))
+			// 	
+			// }
+
+			var div1 = document.querySelector(".div1")
+			div1.onmousedown = function(e1) {
+				var x = e1.clientX
+				var y = e1.clientY
+				var divx=parseInt(window.getComputedStyle(div1).left)
+				var divy=parseInt(window.getComputedStyle(div1).top)
+
+				document.onmousemove = function(e2) {
+					console.log(e2)
+div1.style.left= divx+ (e2.clientX - x)+"px"
+div1.style.top = divy + (e2.clientY - y)+"px"
+				}
+
+				div1.onmouseup = function() {
+					document.onmousemove = null
+				}
+			}
+		</script>
+
+
+	</body>
+</html>

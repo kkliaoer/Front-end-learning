@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<style type="text/css">
+			.div1 {
+				width: 200px;
+				height: 200px;
+				background-color: brown;
+				cursor: pointer;
+			}
+		</style>
+		<div class="div1">xx</div>
+		<script type="text/javascript">
+			var div1=document.querySelector(".div1")
+			 div1.onmousedown=function(e) {
+			 	console.log(666)
+			 }
+			 div1.onmouseup=function() {
+			 	console.log(111)
+			 }
+			div1.onmousemove=function(e) {
+				console.log(333)
+				console.log(e)
+			}
+			
+
+		</script>
+
+	</body>
+</html>

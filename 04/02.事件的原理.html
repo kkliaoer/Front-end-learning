@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<style type="text/css">
+			.div1 {
+				width: 200px;
+				height: 200px;
+				background-color: brown;
+				cursor: pointer;
+			}
+			.div2 {
+				width: 100px;
+				height: 300px;
+				background-color: gold;
+				cursor: pointer;
+				position: absolute;
+				left: 100px;
+				top: 300px;
+			}
+		</style>
+		<div class="div1">
+
+			<div class="div2"></div>
+		</div>
+		<script type="text/javascript">
+			var div1=document.querySelector(".div1")
+			div1.addEventListener("click",function(e){
+				console.log(e)
+				console.log("div1 大盒子")
+			},false)
+			var div2=document.querySelector(".div2")
+			div2.addEventListener("click",function(e){
+				console.log("div2 小盒子")
+				
+				e.stopPropagation()
+			})
+			
+			//阻止事件冒泡
+		</script>
+
+
+
+	</body>
+</html>

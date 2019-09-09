@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	<input type="text" name="userid" id="userid" />	
+	<script type="text/javascript">
+		// userid.onchange=function() {
+		// 	console.log(this.value)
+		// 	
+		// 	//当光标失去时(失焦) value改变
+		// 	//常常做表单验证
+		// }
+		userid.oninput=function(e) {
+			//用户在输入就会触发
+			
+			console.log(e,this.value)
+		}
+		
+	</script>	
+		
+		
+	</body>
+</html>
