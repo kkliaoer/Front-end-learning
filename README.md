@@ -1,1 +1,1 @@
-there is nothing to read and this repository is just for testing.
+2019-07实训学习内容，包含HTML5+CSS3+JavaScript基础内容。
