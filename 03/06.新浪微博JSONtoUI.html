@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+      <link rel="stylesheet" href="css/my.css"/>     
+	  <script src="js/my.js"></script> 
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			console.log(data)
+		var arr=data.statuses	
+		for(var i=0;i<arr.length;i++){
+			var content=document.createElement("div")
+			content.className="content"
+			
+			var touxiang=document.createElement("img")
+			touxiang.className="touxiang"
+			touxiang.src=arr[i].user.profile_image_url
+			
+			var text=document.createElement("p")
+			text.innerHTML=arr[i].text
+			text.className="text"
+			
+			content.appendChild(touxiang)
+			content.appendChild(text)
+			document.body.appendChild(content)
+		}	
+			
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.p1 {
+				width: 200px;
+				height: 40px;
+				background-color: gray;
+			}
+			.content1{
+				width: 970px;
+				height: 200px;
+				position: relative;
+				margin: 10px auto;
+				background-color: brown;
+			}
+			.touxiang{
+				width: 120px;
+				height: 120px;
+				position: absolute;
+				left: 100px;
+				top: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var arr = ["js", "css", "html", "vue", "react", "nodejs"]
+			//
+			for (var i = 0; i < arr.length; i++) {
+				var p1 = document.createElement("p")
+				p1.innerHTML = arr[i]
+				p1.className = "p1"
+				document.body.appendChild(p1)
+			}
+		</script>
+
+
+		<script type="text/javascript">
+			var arr2 = [{
+				name: "karen",
+				age: "48",
+				img:"https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=4238597523,4271442857&fm=27&gp=0.jpg"
+			}, {
+				name: "jack",
+				age: "36",
+				img:"https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=366321175,1776840190&fm=173&app=25&f=JPEG?w=218&h=146&s=96D35F96CC73EB8242CDF1F103005031"
+			}, {
+				name: "marry",
+				age: "18",
+				img:"https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=1107184199,4015152085&fm=173&app=25&f=JPEG?w=218&h=146&s=6E32804106330A21468875F303001026"
+			}]
+			
+			for(var i=0;i<arr2.length;i++){
+				var content1=document.createElement("div")
+				content1.className="content1"
+				
+				var name1=document.createElement("p")
+				var age1=document.createElement("p")
+				var touxiang=document.createElement("img")
+				touxiang.className="touxiang"
+				
+				name1.innerHTML=arr2[i].name
+				age1.innerHTML=arr2[i].age
+				touxiang.src=arr2[i].img
+				
+				document.body.appendChild(content1)
+	   			content1.appendChild(name1)
+				content1.appendChild(age1)
+				content1.appendChild(touxiang)
+			}
+			
+			
+			
+		</script>
+	</body>
+</html>
