@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	<style type="text/css">
+		.nav{
+			width: 200px;
+			height: 600px;
+			background-color: darkgray;
+			border: 1px red solid;
+		}
+		.p1{
+			width: 200px;
+			height: 40px;
+			background-color: brown;
+			/* margin: 10px 20px 30px 40px; */
+			/* 复合样式
+			margin:元素的边界距离其他元素边界的最小间隔
+			 4:上右下左 
+			 3:上右下没有就去对边取
+			 2 上右没有就去对边取,对边没有就取临边
+			 */
+			margin:10px 0px;
+			/* margin-bottom: 10px; */
+		}
+		
+		
+		.p2{
+			/* 
+			padding:
+			 用法跟margin一样,代表元素内部的内容距离边界的间隔
+			 */
+			padding-left:10px;
+		}
+	</style>
+	<div class="nav">
+	  <p class="p1 p2">hello</p>
+	  <p class="p1">hello</p>
+	  <p class="p1">hello</p>
+	  <p class="p1">hello</p>
+	  <p class="p1">hello</p>		
+	</div>	
+		
+	</body>
+</html>
