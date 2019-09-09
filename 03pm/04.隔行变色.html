@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<p class="p1">xxx</p>
+		<p class="p1">xxx</p>
+		<p class="p1">xxx</p>
+		<p class="p1">xxx</p>
+		<p class="p1">xxx</p>
+
+		<script type="text/javascript">
+			var p1s = document.querySelectorAll(".p1")
+
+			// p1s[0].style.backgroundColor="red"
+			// p1s[1].style.backgroundColor="blue"
+			// p1s[2].style.backgroundColor="red"
+			// p1s[3].style.backgroundColor="blue"
+			// p1s[4].style.backgroundColor="red"
+
+			// 			for (var i = 0; i < p1s.length; i++) {
+			// 				if (i % 2 == 0) {
+			// 					p1s[i].style.backgroundColor = "red"
+			// 
+			// 				} else {
+			// 					p1s[i].style.backgroundColor = "blue"
+			// 				}
+			// 
+			// 			}
+
+
+			//+号左右两边只要有一个是字符串,
+			//就会把另外一个转化为字符串然后拼接
+			// var r=100
+			// var str="hello"
+			// var re=str+r//"hello100"
+
+			//随机一个指定范围的数
+			// 20-80  [0,1)
+			// var x=Math.random()
+			// console.log(x)
+			// parseInt(x*(80-20)+20)
+			//公式: parseInt(Math.random()*(max-min)+min)
+
+
+			var arr = document.querySelectorAll(".p1")
+			for (var i = 0; i < arr.length; i++) {
+				var r = parseInt(Math.random() * 255)
+				var g = parseInt(Math.random() * 255)
+				var b = parseInt(Math.random() * 255)
+				arr[i].style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")"
+
+			}
+		</script>
+
+
+	</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<link rel="stylesheet" type="text/css" href="css/sina.css" />
+	</head>
+	<body>
+		<script src="src/sinalastdata.js"></script>
+		<script src="js/tool.js"></script>
+		<!-- 
+		  把引入的js文件执行了一次 
+		  var sina={...}
+		 -->
+		<script type="text/javascript">
+			console.log(sina)
+			for (var i = 0; i < sina.statuses.length; i++) {
+				var sinaDiv = document.createElement("div")
+				sinaDiv.className = "sinaDiv"
+
+
+
+				//昵称
+				// var p1=document.createElement("p")
+				// p1.innerHTML=sina.statuses[i].user.name
+				// p1.className="name1"
+				var p1 = mycreateEle("p", sina.statuses[i].user.name, "name1")
+
+
+				//发表时间
+				var mystr = tool(sina.statuses[i].created_at)
+				var time1 = mycreateEle("p", mystr, "time1")
+
+
+
+				//发表的内容
+				var text = mycreateEle("p", sina.statuses[i].text, "text")
+
+
+				sinaDiv.appendChild(p1)
+				sinaDiv.appendChild(time1)
+				sinaDiv.appendChild(text)
+				document.body.appendChild(sinaDiv)
+
+
+			}
+		</script>
+	</body>
+</html>

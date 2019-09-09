@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- 
+	js 基于面向对象的一种嵌入式的脚本语言
+	用于用户交互的接口操作
+	 -->
+
+		<a href="javascript:void(0)">xxx</a>
+		<script type="text/javascript">
+			// var a=20.1
+			// function fn () {
+			// 	console.log(6666)
+			// }
+			// fn()
+			// fn()
+
+
+			// var a=20
+			// var b="hello"//'xxxx' "s"
+			// var c=true
+			// var d=undefined//
+			// var e=null
+			// var obj={name:"karen"}
+			// //JSON
+			// // obj.name
+			// var arr=["hello",200,true]
+			// arr[0]
+
+			var statuses = [{
+				name: "karen",
+				its:["csss","js"]
+			}, {
+				name: "karen2",
+				its:["csss2","js2"]
+			}, {
+				name: "kare3",
+				its:["csss3","js3"]
+			}]
+			console.log(statuses)
+			// statuses[2].name
+			var div=document.createElement("div")
+			var name1=document.createElement("h1")
+			var p1=document.createElement("p")
+			
+			p1.innerHTML=statuses[0].its[0]
+			name1.innerHTML=statuses[0].name
+			
+			div.appendChild(name1)
+			div.appendChild(p1)
+			document.body.appendChild(div)
+			
+			
+		</script>
+
+<script type="text/javascript">
+// 创建标签
+var div1=document.createElement("div")
+div1.innerHTML="hello6666"//相当于标签的尖括号里面
+
+
+//添加新标签到指定的界面
+document.body.appendChild(div1)
+
+</script>
+
+
+
+<script type="text/javascript">
+var arr=["hello","karen"]
+
+
+	
+</script>
+	</body>
+</html>

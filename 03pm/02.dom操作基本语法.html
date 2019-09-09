@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	<!-- 
+	 对页面上元素的操作:DOM操作
+	  增删改查,对元素本身的操作
+	 -->
+	 <style type="text/css">
+	 	.div1{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+		}
+		
+	 </style>
+	 <div class="div1">hello div1</div>
+	 <div class="div1" id="div1">hello div1</div>
+	 
+	<script type="text/javascript">
+		//获取页面上已经存在的元素
+		
+		//H5新方法
+		var div1=document.querySelector(".div1")
+		//第一个匹配项
+		console.log(div1)
+		
+		
+		var divs=document.querySelectorAll(".div1")
+		//所有匹配项
+		console.log(divs)
+		
+		
+		
+		//web2.0出的
+		// var div_id=document.getElementById("div1")
+		// console.log(div_id)
+		// var div_class=document.getElementsByClassName("div1")
+		// console.log(div_class)
+		
+	</script>
+		
+	
+	<script type="text/javascript">
+		//创建新的元素:创建的元素只是内存中,不在页面上
+		var h1=document.createElement("h1")
+		h1.innerHTML="666"
+		
+		var div1=document.querySelector(".div1")
+		div1.appendChild(h1)
+		
+		
+	</script>
+		
+		<script type="text/javascript">
+var divremo=document.querySelector(".div1")
+divremo.remove()
+			
+		</script>
+	</body>
+</html>
