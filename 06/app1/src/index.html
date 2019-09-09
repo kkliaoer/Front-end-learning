@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+	</head>
+	<body>
+		<h1>首页</h1>
+		<img src="img/27.jpg">
+
+		<video width="300" height="" src="video/buy.mp4" controls="controls">
+
+		</video>
+		<a href="views/my/my.html">my</a>
+
+		<br>
+
+		userid:<input type="text" name="userid" id="userid" value="" /> <br>
+		pwd:<input type="password" name="password" id="password" value="" /> <br>
+		<button type="button" id="btn">点击时用ajax把两个输入框的数据获取了 发送给后端接口</button>
+
+		<script type="text/javascript">
+			var btn = document.querySelector("#btn")
+			btn.onclick = function() {
+				//做网络请求
+				// url http://10.19.248.186:81/info.json
+				//怎么给后端传参数:
+				//   网址?name=karen&pwd=123&count=20&page=2
+
+				var userid = document.querySelector("#userid").value //abc
+				var password = document.querySelector("#password").value //123
+
+				//  "userid=abc&&password=123"
+				var str = "userid=" + userid + "&password=" + password
+
+				var url = "http://10.19.248.186:81/info.json?" + str
+				$.get(url, function(data) {
+					console.log(data)
+				})
+
+			}
+		</script>
+
+
+		<img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p480747492.webp">
+
+
+		<hr>
+
+
+		<button id="loadingBtn" type="button">加载全部电影数据</button>
+		<script type="text/javascript">
+			loadingBtn.onclick = function() {
+				$.get("http://10.19.248.186:81/loadALL", function(data) {
+					console.log(data)
+					//data是一个数组中装了很对象
+				})
+
+			}
+		</script>
+		<br>
+		<input type="search" name="search" id="search1" value="" />
+		<button type="button" id="seach">seach</button>
+         <script type="text/javascript">
+         	seach.onclick=function() {
+         		var v=search1.value
+				$.get("http://10.19.248.186:81/seach?label="+v,function(data) {
+					console.log(data)
+				})
+				
+				
+         	}
+         </script> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</body>
+</html>
