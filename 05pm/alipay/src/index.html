@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- 
+		当前url: http://ip:port/666
+		js文件的url: http://ip:port/js/too.js
+		 -->
+		<script src="js/tool.js" type="text/javascript" charset="utf-8"></script>
+
+
+
+	</head>
+	<body>
+		<h1>首页</h1>
+		<!-- 
+		 当用户点了这个锚点以后
+		 //1.发送网路请求:
+		 系统自带的网络请求(get)
+		 网址url: 当前页面所在的接口 的相对路径  (相对网络路径)
+		 //当前的url:   http://ip:port/666
+		 //锚点点击以后的url:     http://ip:port/my.html
+		 -->
+		<a href="my.html">my页面</a>
+		<img src="1.jpg" >
+		
+		<button id="btn">点我去请求服务器的json数据  然后展示出来</button>
+		<script type="text/javascript">
+			btn.onclick=function() {
+				var xhr=new XMLHttpRequest() || new ActiveXObject("Micsoft.XMLHTTP")
+				xhr.open("GET","/news.json",true)
+				xhr.send()
+				
+				xhr.onreadystatechange=function() {
+					if(xhr.readyState==4&&xhr.status==200){
+						console.log(xhr.responseText)
+						var h1=document.createElement("h1")
+						
+						h1.innerHTML=JSON.parse(xhr.responseText).name
+						document.body.appendChild(h1)
+					}
+				}
+				
+			}
+		</script>
+		
+		
+		
+		
+		<script type="text/javascript">
+			fn()
+		</script>
+	</body>
+</html>
